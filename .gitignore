@@ -12,8 +12,9 @@ override.tf.json
 # ignore all tfvars (may contain secrets)
 *.tfvars
 *.tfvars.json
-# keep ESLZ example files tracked
+# keep ESLZ example files and the live-test fixture tracked
 !ESLZ/*.tfvars
+!test/live/config/*.tfvars
 .idea/
 .vscode/
 *.swp
