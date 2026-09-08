@@ -24,8 +24,8 @@ run "naming_convention" {
   }
 
   assert {
-    condition     = azurerm_monitor_data_collection_endpoint.dce.name == "dev-slrd-test-endpoint"
-    error_message = "Name must follow {env4}-{group}-{project}-{userDefinedString} convention"
+    condition     = azurerm_monitor_data_collection_endpoint.dce.name == "dev-slrd-test-endpoint-dce"
+    error_message = "Name must follow {env4}-{group}-{project}-{userDefinedString}-dce convention"
   }
 }
 

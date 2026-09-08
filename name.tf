@@ -5,5 +5,6 @@ locals {
   project-regex_compliant               = replace(lower(var.project), local.dce_regex, "")
   dce-userDefinedString-regex_compliant = replace(lower(var.userDefinedString), local.dce_regex, "")
   dce_prefix                            = "${local.env-regex_compliant_4}-${local.group-regex_compliant}-${local.project-regex_compliant}"
-  dce_name                              = substr("${local.dce_prefix}-${local.dce-userDefinedString-regex_compliant}", 0, 64)
+  dce_suffix                            = "-dce"
+  dce_name                              = "${substr("${local.dce_prefix}-${local.dce-userDefinedString-regex_compliant}", 0, 64 - length(local.dce_suffix))}${local.dce_suffix}"
 }

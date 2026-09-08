@@ -21,7 +21,7 @@ cd ESLZ && terraform init && terraform plan -var-file=DataCollectionEndpoint.tfv
 
 ## Naming convention
 
-`{env4}-{group}-{project}-{userDefinedString}`, lowercased and stripped of any character not
+`{env4}-{group}-{project}-{userDefinedString}-dce`, lowercased and stripped of any character not
 matching `[0-9a-z-]`, truncated to 64 chars. Implemented in [name.tf](name.tf); resource
 group name resolution (accepts either a `resource_groups` map key or a full resource ID) is
 in [locals.tf](locals.tf).
